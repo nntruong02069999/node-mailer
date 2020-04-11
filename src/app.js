@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 //setting view engine
 app.engine('handlebars', exphbs())
 app.set('view engine', 'handlebars')
-
+app.set('views',path.join(__dirname, 'views'));
 //Static file
 app.use('/public', express.static(path.join(__dirname,'public')))
 

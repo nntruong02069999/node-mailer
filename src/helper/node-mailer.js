@@ -5,7 +5,7 @@ async function NodeMailer(req, res) {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth : {
-            user : 'nntruong020699@gmail.com',
+            user : process.env.username,
             pass : process.env.password
         }
     })
